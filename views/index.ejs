@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+<div class="container">
+    <h1>Post Index Page</h1>
+    
+    <% posts.forEach(function(post) { %>
+        <img src="<%= post.image %>">
+        <p><small>Posted on <%= post.created_at.toDateString() %></small></p>
+        <a href="/posts/<%= post._id %>"><h3><%= post.title %></h3></a>
+        <p><%= post.body.substring(0, 100) %>...<a href="/posts/<%= post._id %>"><small>Read More</small></a></p>
+        
+        <hr>
+    <% }) %>
+    
+</div>
+
+
+<% include partials/footer %>    
+

@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>New Post</h1>
+            <form action="/posts" method="POST">
+                <div class="form-group">
+                    <input type="text" name="post[title]" class="form-control" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="post[image]" class="form-control" placeholder="Image URL">
+                </div>
+                <div class="form-group">
+                    <textarea name="post[body]" rows="10" class="form-control" placeholder="Post Body"></textarea>
+                </div>                
+                <div class="form-group">
+                    <button class="btn btn-outline-primary btn-block">Submit</button>
+                </div>
+            </form>            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<% include partials/footer %>
